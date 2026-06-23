@@ -1,12 +1,9 @@
-import { useNavigate } from "react-router-dom";
+
 
 function Navbar({ onOpenSidebar }) {
-  const navigate = useNavigate();
+  
 
-  const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
-  };
+  
 
   return (
     <div className="bg-white shadow p-4 flex items-center justify-between gap-4 flex-nowrap">
@@ -40,12 +37,7 @@ function Navbar({ onOpenSidebar }) {
           Admin
         </span>
 
-        <button
-          onClick={handleLogout}
-          className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
-        >
-          Logout
-        </button>
+        
       </div>
     </div>
   );
