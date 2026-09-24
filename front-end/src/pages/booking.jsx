@@ -51,7 +51,7 @@ function Booking() {
   };
 
   const handleDelete = async (id) => {
-    await api.delete(`/api/bookings/${id}`);
+    await api.delete(`/bookings/${id}`);
     fetchData();
   };
 
