@@ -15,8 +15,8 @@ function Payments() {
 
   const fetchData = async () => {
     try {
-      const ridersRes = await api.get("/api/riders");
-      const paymentsRes = await api.get("/api/payments");
+      const ridersRes = await api.get("/riders");
+      const paymentsRes = await api.get("/payments");
 
       setRiders(ridersRes.data);
       setPayments(paymentsRes.data);

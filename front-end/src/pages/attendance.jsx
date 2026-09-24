@@ -14,8 +14,8 @@ function Attendance() {
 
   const fetchData = async () => {
     try {
-      const bookingsRes = await api.get("/api/bookings");
-      const attendanceRes = await api.get("/api/attendance");
+      const bookingsRes = await api.get("/bookings");
+      const attendanceRes = await api.get("/attendance");
 
       setBookings(bookingsRes.data);
       setAttendance(attendanceRes.data);

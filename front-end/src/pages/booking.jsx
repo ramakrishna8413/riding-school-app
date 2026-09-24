@@ -17,10 +17,10 @@ function Booking() {
 
   const fetchData = async () => {
     try {
-      const ridersRes = await api.get("/api/riders");
-      const horsesRes = await api.get("/api/horses");
-      const trainersRes = await api.get("/api/trainers");
-      const bookingsRes = await api.get("/api/bookings");
+      const ridersRes = await api.get("/riders");
+      const horsesRes = await api.get("/horses");
+      const trainersRes = await api.get("/trainers");
+      const bookingsRes = await api.get("/bookings");
 
       setRiders(ridersRes.data);
       setHorses(horsesRes.data);
