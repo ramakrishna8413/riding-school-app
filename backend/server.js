@@ -159,7 +159,7 @@ app.delete("/api/bookings/:id", (req, res) => {
 
 // ================= DASHBOARD =================
 
-app.get("/api/dashboard", (req, res) => {
+app.get("/dashboard", (req, res) => {
   const dashboardData = {};
 
   db.query(
@@ -247,7 +247,7 @@ app.post("/api/attendance", (req, res) => {
   );
 });
 
-app.get("/api/recent-bookings", (req, res) => {
+app.get("/recent-bookings", (req, res) => {
   db.query(
     `SELECT 
       b.booking_id,
@@ -329,20 +329,52 @@ app.get("/api/revenue", (req, res) => {
   );
 });
 
+// app.delete("/api/payments/:id", (req, res) => {
+//   db.query(
+//     "DELETE FROM payments WHERE payment_id = ?",
+//     [req.params.id],
+//     (err, result) => {
+//       if (err) {
+//         return res.status(500).json(err);
+//       }
+
+//       res.json({
+//         message: "Payment Deleted Successfully",
+//       });
+//     }
+//   );
+// });
+
 app.delete("/api/payments/:id", (req, res) => {
+
   db.query(
-    "DELETE FROM payments WHERE payment_id = ?",
+    "DELETE FROM invoices WHERE payment_id = ?",
     [req.params.id],
-    (err, result) => {
+    (err) => {
+
       if (err) {
         return res.status(500).json(err);
       }
 
-      res.json({
-        message: "Payment Deleted Successfully",
-      });
+      db.query(
+        "DELETE FROM payments WHERE payment_id = ?",
+        [req.params.id],
+        (err) => {
+
+          if (err) {
+            return res.status(500).json(err);
+          }
+
+          res.json({
+            message: "Payment Deleted Successfully"
+          });
+
+        }
+      );
+
     }
   );
+
 });
 
 // Get Invoices
