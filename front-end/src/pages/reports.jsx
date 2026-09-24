@@ -12,7 +12,7 @@ function Reports() {
 
   useEffect(() => {
     api
-      .get("/api/reports")
+      .get("/reports")
       .then((res) => setReport(res.data))
       .catch((err) => console.log(err));
   }, []);

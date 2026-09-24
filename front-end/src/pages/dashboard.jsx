@@ -15,17 +15,17 @@ function Dashboard() {
 
   useEffect(() => {
     api
-      .get("/api/dashboard")
+      .get("/dashboard")
       .then((res) => setStats(res.data))
       .catch((err) => console.log(err));
 
     api
-      .get("/api/revenue")
+      .get("/revenue")
       .then((res) => setRevenue(res.data.totalRevenue || 0))
       .catch((err) => console.log(err));
 
     api
-      .get("/api/recent-bookings")
+      .get("/recent-bookings")
       .then((res) => setRecentBookings(res.data))
       .catch((err) => console.log(err));
   }, []);

@@ -14,7 +14,7 @@ function Riders() {
 
   const fetchRiders = () => {
     api
-      .get("/api/riders")
+      .get("/riders")
       .then((res) => setRiders(res.data))
       .catch((err) => console.log(err));
   };
@@ -33,7 +33,7 @@ function Riders() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await api.post("/api/riders", formData);
+    await api.post("/riders", formData);
 
     setFormData({
       rider_name: "",

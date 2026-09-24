@@ -32,7 +32,7 @@ function Payments() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await api.post("/api/payments", formData);
+    await api.post("/payments", formData);
 
     setFormData({
       rider_id: "",
@@ -50,7 +50,7 @@ function Payments() {
   };
 
   const generateInvoice = async (paymentId) => {
-    await api.post("/api/invoices", {
+    await api.post("/invoices", {
       payment_id: paymentId,
     });
 

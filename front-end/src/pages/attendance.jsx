@@ -31,7 +31,7 @@ function Attendance() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await api.post("/api/attendance", formData);
+    await api.post("/attendance", formData);
 
     setFormData({
       booking_id: "",

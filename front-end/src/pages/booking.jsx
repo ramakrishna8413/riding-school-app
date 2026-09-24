@@ -38,7 +38,7 @@ function Booking() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await api.post("/api/bookings", formData);
+    await api.post("/bookings", formData);
 
     setFormData({
       rider_id: "",

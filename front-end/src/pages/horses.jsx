@@ -14,7 +14,7 @@ function Horses() {
 
   const fetchHorses = () => {
     api
-      .get("/api/horses")
+      .get("/horses")
       .then((res) => setHorses(res.data))
       .catch((err) => console.log(err));
   };
@@ -33,7 +33,7 @@ function Horses() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await api.post("/api/horses", formData);
+    await api.post("/horses", formData);
 
     setFormData({
       horse_name: "",

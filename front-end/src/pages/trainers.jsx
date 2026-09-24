@@ -8,7 +8,7 @@ function Trainers() {
 
   useEffect(() => {
     api
-      .get("/api/trainers")
+      .get("/trainers")
       .then((res) => setTrainers(res.data))
       .catch((err) => console.log(err));
   }, []);
