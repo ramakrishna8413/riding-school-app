@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 import Riders from "./pages/riders";
 import Horses from "./pages/horses";
 import Trainers from "./pages/trainers";
