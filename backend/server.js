@@ -159,7 +159,7 @@ app.delete("/api/bookings/:id", (req, res) => {
 
 // ================= DASHBOARD =================
 
-app.get("/dashboard", (req, res) => {
+app.get("/api/dashboard", (req, res) => {
   const dashboardData = {};
 
   db.query(
@@ -247,7 +247,7 @@ app.post("/api/attendance", (req, res) => {
   );
 });
 
-app.get("/recent-bookings", (req, res) => {
+app.get("/api/recent-bookings", (req, res) => {
   db.query(
     `SELECT 
       b.booking_id,
