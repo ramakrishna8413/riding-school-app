@@ -6,6 +6,6 @@ export default defineConfig({
   base: "/riding-school-app/",
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: "../docs",
+    outDir: "dist",
   },
 });
