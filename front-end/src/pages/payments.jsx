@@ -45,7 +45,7 @@ function Payments() {
   };
 
   const handleDelete = async (id) => {
-    await api.delete(`/api/payments/${id}`);
+    await api.delete(`/payments/${id}`);
     fetchData();
   };
 
