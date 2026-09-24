@@ -1,15 +1,15 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
-import Riders from "./pages/Riders";
-import Horses from "./pages/Horses";
-import Trainers from "./pages/Trainers";
-import Booking from "./pages/Booking";
-import Attendance from "./pages/Attendance";
-import Payments from "./pages/Payments";
-import Invoices from "./pages/Invoices";
-import Reports from "./pages/Reports";
-import Profile from "./pages/Profile";
+import Dashboard from "./pages/dashboard";
+import Riders from "./pages/riders";
+import Horses from "./pages/horses";
+import Trainers from "./pages/trainers";
+import Booking from "./pages/booking";
+import Attendance from "./pages/attendance";
+import Payments from "./pages/payments";
+import Invoices from "./pages/invoices";
+import Reports from "./pages/reports";
+import Profile from "./pages/profile";
 
 function App() {
   return (
